@@ -26,6 +26,7 @@ public class ShowBlog {
     private Date updateTime;
 
     public ShowBlog() {
+        
     }
 
     public Long getId() {
