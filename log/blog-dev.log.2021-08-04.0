@@ -1,0 +1,277 @@
+2021-08-04 19:28:03.005  INFO 16276 --- [restartedMain] com.star.MyblogApplication               : Starting MyblogApplication on LAPTOP-D9PU3479 with PID 16276 (E:\JavaProject\myblog-mybatis-master\target\classes started by admin in E:\JavaProject\myblog-mybatis-master)
+2021-08-04 19:28:03.011 DEBUG 16276 --- [restartedMain] com.star.MyblogApplication               : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2021-08-04 19:28:03.012  INFO 16276 --- [restartedMain] com.star.MyblogApplication               : The following profiles are active: dev
+2021-08-04 19:28:03.057  INFO 16276 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-08-04 19:28:03.064  INFO 16276 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-08-04 19:28:04.148  INFO 16276 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-08-04 19:28:04.155  INFO 16276 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-04 19:28:04.155  INFO 16276 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-08-04 19:28:04.216  INFO 16276 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-04 19:28:04.217  INFO 16276 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1153 ms
+2021-08-04 19:28:04.779  INFO 16276 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-04 19:28:04.859  INFO 16276 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-08-04 19:28:05.157  INFO 16276 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-08-04 19:28:05.193  INFO 16276 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-04 19:28:05.196  INFO 16276 --- [restartedMain] com.star.MyblogApplication               : Started MyblogApplication in 2.633 seconds (JVM running for 3.575)
+2021-08-04 19:28:14.828  INFO 16276 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-04 19:28:14.828  INFO 16276 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-08-04 19:28:14.837  INFO 16276 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2021-08-04 19:28:20.455  INFO 16276 --- [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-08-04 19:28:20.545  INFO 16276 --- [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-08-04 19:28:20.550 DEBUG 16276 --- [http-nio-8080-exec-3] c.s.d.UserDao.findByUsernameAndPassword  : ==>  Preparing: select * from myblog.t_user where username = ? and password = ?; 
+2021-08-04 19:28:20.564 DEBUG 16276 --- [http-nio-8080-exec-3] c.s.d.UserDao.findByUsernameAndPassword  : ==> Parameters: zhaosi(String), 96e79218965eb72c92a549dd5a330112(String)
+2021-08-04 19:28:20.581 DEBUG 16276 --- [http-nio-8080-exec-3] c.s.d.UserDao.findByUsernameAndPassword  : <==      Total: 1
+2021-08-04 19:28:20.632  INFO 16276 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-04 19:28:20.637 DEBUG 16276 --- [http-nio-8080-exec-8] com.star.dao.BlogDao.getBlogTotal        : ==>  Preparing: select count(*) from myblog.t_blog 
+2021-08-04 19:28:20.637 DEBUG 16276 --- [http-nio-8080-exec-8] com.star.dao.BlogDao.getBlogTotal        : ==> Parameters: 
+2021-08-04 19:28:20.643 DEBUG 16276 --- [http-nio-8080-exec-8] com.star.dao.BlogDao.getBlogTotal        : <==      Total: 1
+2021-08-04 19:28:20.644 DEBUG 16276 --- [http-nio-8080-exec-8] com.star.dao.BlogDao.getBlogViewTotal    : ==>  Preparing: select sum(views) from myblog.t_blog 
+2021-08-04 19:28:20.644 DEBUG 16276 --- [http-nio-8080-exec-8] com.star.dao.BlogDao.getBlogViewTotal    : ==> Parameters: 
+2021-08-04 19:28:20.645 DEBUG 16276 --- [http-nio-8080-exec-8] com.star.dao.BlogDao.getBlogViewTotal    : <==      Total: 1
+2021-08-04 19:28:20.645 DEBUG 16276 --- [http-nio-8080-exec-8] c.star.dao.BlogDao.getBlogCommentTotal   : ==>  Preparing: select count(*) from myblog.t_comment 
+2021-08-04 19:28:20.645 DEBUG 16276 --- [http-nio-8080-exec-8] c.star.dao.BlogDao.getBlogCommentTotal   : ==> Parameters: 
+2021-08-04 19:28:20.647 DEBUG 16276 --- [http-nio-8080-exec-8] c.star.dao.BlogDao.getBlogCommentTotal   : <==      Total: 1
+2021-08-04 19:28:20.647 DEBUG 16276 --- [http-nio-8080-exec-8] c.star.dao.BlogDao.getBlogMessageTotal   : ==>  Preparing: select count(*) from myblog.t_message 
+2021-08-04 19:28:20.648 DEBUG 16276 --- [http-nio-8080-exec-8] c.star.dao.BlogDao.getBlogMessageTotal   : ==> Parameters: 
+2021-08-04 19:28:20.649 DEBUG 16276 --- [http-nio-8080-exec-8] c.star.dao.BlogDao.getBlogMessageTotal   : <==      Total: 1
+2021-08-04 19:28:20.650  INFO 16276 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Result : index :: blogMessage
+2021-08-04 19:28:22.064 DEBUG 16276 --- [http-nio-8080-exec-10] c.s.dao.BlogDao.getAllBlogQuery_COUNT    : ==>  Preparing: SELECT count(0) FROM myblog.t_blog b LEFT OUTER JOIN myblog.t_type t ON b.type_id = t.id 
+2021-08-04 19:28:22.064 DEBUG 16276 --- [http-nio-8080-exec-10] c.s.dao.BlogDao.getAllBlogQuery_COUNT    : ==> Parameters: 
+2021-08-04 19:28:22.066 DEBUG 16276 --- [http-nio-8080-exec-10] c.s.dao.BlogDao.getAllBlogQuery_COUNT    : <==      Total: 1
+2021-08-04 19:28:22.068 DEBUG 16276 --- [http-nio-8080-exec-10] com.star.dao.BlogDao.getAllBlogQuery     : ==>  Preparing: SELECT b.id, b.title, b.update_time, b.recommend, b.published, b.type_id, t.id, t.name FROM myblog.t_blog b LEFT OUTER JOIN myblog.t_type t ON b.type_id = t.id order by update_time asc LIMIT ? 
+2021-08-04 19:28:22.069 DEBUG 16276 --- [http-nio-8080-exec-10] com.star.dao.BlogDao.getAllBlogQuery     : ==> Parameters: 10(Integer)
+2021-08-04 19:28:22.072 DEBUG 16276 --- [http-nio-8080-exec-10] com.star.dao.BlogDao.getAllBlogQuery     : <==      Total: 4
+2021-08-04 19:28:22.081 DEBUG 16276 --- [http-nio-8080-exec-10] com.star.dao.TypeDao.getAllType          : ==>  Preparing: select * from myblog.t_type 
+2021-08-04 19:28:22.081 DEBUG 16276 --- [http-nio-8080-exec-10] com.star.dao.TypeDao.getAllType          : ==> Parameters: 
+2021-08-04 19:28:22.083 DEBUG 16276 --- [http-nio-8080-exec-10] com.star.dao.TypeDao.getAllType          : <==      Total: 14
+2021-08-04 19:28:22.136  INFO 16276 --- [http-nio-8080-exec-5] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-04 19:28:22.136 DEBUG 16276 --- [http-nio-8080-exec-5] com.star.dao.BlogDao.getBlogTotal        : ==>  Preparing: select count(*) from myblog.t_blog 
+2021-08-04 19:28:22.137 DEBUG 16276 --- [http-nio-8080-exec-5] com.star.dao.BlogDao.getBlogTotal        : ==> Parameters: 
+2021-08-04 19:28:22.138 DEBUG 16276 --- [http-nio-8080-exec-5] com.star.dao.BlogDao.getBlogTotal        : <==      Total: 1
+2021-08-04 19:28:22.139 DEBUG 16276 --- [http-nio-8080-exec-5] com.star.dao.BlogDao.getBlogViewTotal    : ==>  Preparing: select sum(views) from myblog.t_blog 
+2021-08-04 19:28:22.139 DEBUG 16276 --- [http-nio-8080-exec-5] com.star.dao.BlogDao.getBlogViewTotal    : ==> Parameters: 
+2021-08-04 19:28:22.141 DEBUG 16276 --- [http-nio-8080-exec-5] com.star.dao.BlogDao.getBlogViewTotal    : <==      Total: 1
+2021-08-04 19:28:22.142 DEBUG 16276 --- [http-nio-8080-exec-5] c.star.dao.BlogDao.getBlogCommentTotal   : ==>  Preparing: select count(*) from myblog.t_comment 
+2021-08-04 19:28:22.142 DEBUG 16276 --- [http-nio-8080-exec-5] c.star.dao.BlogDao.getBlogCommentTotal   : ==> Parameters: 
+2021-08-04 19:28:22.145 DEBUG 16276 --- [http-nio-8080-exec-5] c.star.dao.BlogDao.getBlogCommentTotal   : <==      Total: 1
+2021-08-04 19:28:22.145 DEBUG 16276 --- [http-nio-8080-exec-5] c.star.dao.BlogDao.getBlogMessageTotal   : ==>  Preparing: select count(*) from myblog.t_message 
+2021-08-04 19:28:22.146 DEBUG 16276 --- [http-nio-8080-exec-5] c.star.dao.BlogDao.getBlogMessageTotal   : ==> Parameters: 
+2021-08-04 19:28:22.147 DEBUG 16276 --- [http-nio-8080-exec-5] c.star.dao.BlogDao.getBlogMessageTotal   : <==      Total: 1
+2021-08-04 19:28:22.148  INFO 16276 --- [http-nio-8080-exec-5] com.star.aspect.LogAspect                : Result : index :: blogMessage
+2021-08-04 19:55:42.432 DEBUG 16276 --- [http-nio-8080-exec-10] com.star.dao.TypeDao.getAllType_COUNT    : ==>  Preparing: SELECT count(0) FROM myblog.t_type 
+2021-08-04 19:55:42.432 DEBUG 16276 --- [http-nio-8080-exec-10] com.star.dao.TypeDao.getAllType_COUNT    : ==> Parameters: 
+2021-08-04 19:55:42.433 DEBUG 16276 --- [http-nio-8080-exec-10] com.star.dao.TypeDao.getAllType_COUNT    : <==      Total: 1
+2021-08-04 19:55:42.434 DEBUG 16276 --- [http-nio-8080-exec-10] com.star.dao.TypeDao.getAllType          : ==>  Preparing: SELECT * FROM myblog.t_type order by id asc LIMIT ? 
+2021-08-04 19:55:42.435 DEBUG 16276 --- [http-nio-8080-exec-10] com.star.dao.TypeDao.getAllType          : ==> Parameters: 10(Integer)
+2021-08-04 19:55:42.437 DEBUG 16276 --- [http-nio-8080-exec-10] com.star.dao.TypeDao.getAllType          : <==      Total: 10
+2021-08-04 19:55:42.483  INFO 16276 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-04 19:55:42.483 DEBUG 16276 --- [http-nio-8080-exec-4] com.star.dao.BlogDao.getBlogTotal        : ==>  Preparing: select count(*) from myblog.t_blog 
+2021-08-04 19:55:42.484 DEBUG 16276 --- [http-nio-8080-exec-4] com.star.dao.BlogDao.getBlogTotal        : ==> Parameters: 
+2021-08-04 19:55:42.486 DEBUG 16276 --- [http-nio-8080-exec-4] com.star.dao.BlogDao.getBlogTotal        : <==      Total: 1
+2021-08-04 19:55:42.486 DEBUG 16276 --- [http-nio-8080-exec-4] com.star.dao.BlogDao.getBlogViewTotal    : ==>  Preparing: select sum(views) from myblog.t_blog 
+2021-08-04 19:55:42.487 DEBUG 16276 --- [http-nio-8080-exec-4] com.star.dao.BlogDao.getBlogViewTotal    : ==> Parameters: 
+2021-08-04 19:55:42.488 DEBUG 16276 --- [http-nio-8080-exec-4] com.star.dao.BlogDao.getBlogViewTotal    : <==      Total: 1
+2021-08-04 19:55:42.490 DEBUG 16276 --- [http-nio-8080-exec-4] c.star.dao.BlogDao.getBlogCommentTotal   : ==>  Preparing: select count(*) from myblog.t_comment 
+2021-08-04 19:55:42.490 DEBUG 16276 --- [http-nio-8080-exec-4] c.star.dao.BlogDao.getBlogCommentTotal   : ==> Parameters: 
+2021-08-04 19:55:42.492 DEBUG 16276 --- [http-nio-8080-exec-4] c.star.dao.BlogDao.getBlogCommentTotal   : <==      Total: 1
+2021-08-04 19:55:42.493 DEBUG 16276 --- [http-nio-8080-exec-4] c.star.dao.BlogDao.getBlogMessageTotal   : ==>  Preparing: select count(*) from myblog.t_message 
+2021-08-04 19:55:42.493 DEBUG 16276 --- [http-nio-8080-exec-4] c.star.dao.BlogDao.getBlogMessageTotal   : ==> Parameters: 
+2021-08-04 19:55:42.494 DEBUG 16276 --- [http-nio-8080-exec-4] c.star.dao.BlogDao.getBlogMessageTotal   : <==      Total: 1
+2021-08-04 19:55:42.496  INFO 16276 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Result : index :: blogMessage
+2021-08-04 19:55:50.461 DEBUG 16276 --- [http-nio-8080-exec-5] c.s.d.F.listFriendLink_COUNT             : ==>  Preparing: SELECT count(0) FROM myblog.t_friend 
+2021-08-04 19:55:50.462 DEBUG 16276 --- [http-nio-8080-exec-5] c.s.d.F.listFriendLink_COUNT             : ==> Parameters: 
+2021-08-04 19:55:50.472 DEBUG 16276 --- [http-nio-8080-exec-5] c.s.d.F.listFriendLink_COUNT             : <==      Total: 1
+2021-08-04 19:55:50.472 DEBUG 16276 --- [http-nio-8080-exec-5] c.star.dao.FriendLinkDao.listFriendLink  : ==>  Preparing: select * from myblog.t_friend order by t_friend.create_time desc LIMIT ? 
+2021-08-04 19:55:50.473 DEBUG 16276 --- [http-nio-8080-exec-5] c.star.dao.FriendLinkDao.listFriendLink  : ==> Parameters: 10(Integer)
+2021-08-04 19:55:50.474 DEBUG 16276 --- [http-nio-8080-exec-5] c.star.dao.FriendLinkDao.listFriendLink  : <==      Total: 2
+2021-08-04 19:55:50.519  INFO 16276 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-04 19:55:50.519 DEBUG 16276 --- [http-nio-8080-exec-10] com.star.dao.BlogDao.getBlogTotal        : ==>  Preparing: select count(*) from myblog.t_blog 
+2021-08-04 19:55:50.519 DEBUG 16276 --- [http-nio-8080-exec-10] com.star.dao.BlogDao.getBlogTotal        : ==> Parameters: 
+2021-08-04 19:55:50.521 DEBUG 16276 --- [http-nio-8080-exec-10] com.star.dao.BlogDao.getBlogTotal        : <==      Total: 1
+2021-08-04 19:55:50.521 DEBUG 16276 --- [http-nio-8080-exec-10] com.star.dao.BlogDao.getBlogViewTotal    : ==>  Preparing: select sum(views) from myblog.t_blog 
+2021-08-04 19:55:50.522 DEBUG 16276 --- [http-nio-8080-exec-10] com.star.dao.BlogDao.getBlogViewTotal    : ==> Parameters: 
+2021-08-04 19:55:50.522 DEBUG 16276 --- [http-nio-8080-exec-10] com.star.dao.BlogDao.getBlogViewTotal    : <==      Total: 1
+2021-08-04 19:55:50.523 DEBUG 16276 --- [http-nio-8080-exec-10] c.star.dao.BlogDao.getBlogCommentTotal   : ==>  Preparing: select count(*) from myblog.t_comment 
+2021-08-04 19:55:50.523 DEBUG 16276 --- [http-nio-8080-exec-10] c.star.dao.BlogDao.getBlogCommentTotal   : ==> Parameters: 
+2021-08-04 19:55:50.525 DEBUG 16276 --- [http-nio-8080-exec-10] c.star.dao.BlogDao.getBlogCommentTotal   : <==      Total: 1
+2021-08-04 19:55:50.525 DEBUG 16276 --- [http-nio-8080-exec-10] c.star.dao.BlogDao.getBlogMessageTotal   : ==>  Preparing: select count(*) from myblog.t_message 
+2021-08-04 19:55:50.526 DEBUG 16276 --- [http-nio-8080-exec-10] c.star.dao.BlogDao.getBlogMessageTotal   : ==> Parameters: 
+2021-08-04 19:55:50.527 DEBUG 16276 --- [http-nio-8080-exec-10] c.star.dao.BlogDao.getBlogMessageTotal   : <==      Total: 1
+2021-08-04 19:55:50.528  INFO 16276 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Result : index :: blogMessage
+2021-08-04 19:56:01.058 DEBUG 16276 --- [http-nio-8080-exec-3] c.s.dao.BlogDao.getAllBlogQuery_COUNT    : ==>  Preparing: SELECT count(0) FROM myblog.t_blog b LEFT OUTER JOIN myblog.t_type t ON b.type_id = t.id 
+2021-08-04 19:56:01.059 DEBUG 16276 --- [http-nio-8080-exec-3] c.s.dao.BlogDao.getAllBlogQuery_COUNT    : ==> Parameters: 
+2021-08-04 19:56:01.059 DEBUG 16276 --- [http-nio-8080-exec-3] c.s.dao.BlogDao.getAllBlogQuery_COUNT    : <==      Total: 1
+2021-08-04 19:56:01.061 DEBUG 16276 --- [http-nio-8080-exec-3] com.star.dao.BlogDao.getAllBlogQuery     : ==>  Preparing: SELECT b.id, b.title, b.update_time, b.recommend, b.published, b.type_id, t.id, t.name FROM myblog.t_blog b LEFT OUTER JOIN myblog.t_type t ON b.type_id = t.id order by update_time asc LIMIT ? 
+2021-08-04 19:56:01.061 DEBUG 16276 --- [http-nio-8080-exec-3] com.star.dao.BlogDao.getAllBlogQuery     : ==> Parameters: 10(Integer)
+2021-08-04 19:56:01.063 DEBUG 16276 --- [http-nio-8080-exec-3] com.star.dao.BlogDao.getAllBlogQuery     : <==      Total: 4
+2021-08-04 19:56:01.063 DEBUG 16276 --- [http-nio-8080-exec-3] com.star.dao.TypeDao.getAllType          : ==>  Preparing: select * from myblog.t_type 
+2021-08-04 19:56:01.064 DEBUG 16276 --- [http-nio-8080-exec-3] com.star.dao.TypeDao.getAllType          : ==> Parameters: 
+2021-08-04 19:56:01.065 DEBUG 16276 --- [http-nio-8080-exec-3] com.star.dao.TypeDao.getAllType          : <==      Total: 14
+2021-08-04 19:56:01.107  INFO 16276 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-04 19:56:01.107 DEBUG 16276 --- [http-nio-8080-exec-8] com.star.dao.BlogDao.getBlogTotal        : ==>  Preparing: select count(*) from myblog.t_blog 
+2021-08-04 19:56:01.107 DEBUG 16276 --- [http-nio-8080-exec-8] com.star.dao.BlogDao.getBlogTotal        : ==> Parameters: 
+2021-08-04 19:56:01.109 DEBUG 16276 --- [http-nio-8080-exec-8] com.star.dao.BlogDao.getBlogTotal        : <==      Total: 1
+2021-08-04 19:56:01.109 DEBUG 16276 --- [http-nio-8080-exec-8] com.star.dao.BlogDao.getBlogViewTotal    : ==>  Preparing: select sum(views) from myblog.t_blog 
+2021-08-04 19:56:01.110 DEBUG 16276 --- [http-nio-8080-exec-8] com.star.dao.BlogDao.getBlogViewTotal    : ==> Parameters: 
+2021-08-04 19:56:01.110 DEBUG 16276 --- [http-nio-8080-exec-8] com.star.dao.BlogDao.getBlogViewTotal    : <==      Total: 1
+2021-08-04 19:56:01.111 DEBUG 16276 --- [http-nio-8080-exec-8] c.star.dao.BlogDao.getBlogCommentTotal   : ==>  Preparing: select count(*) from myblog.t_comment 
+2021-08-04 19:56:01.111 DEBUG 16276 --- [http-nio-8080-exec-8] c.star.dao.BlogDao.getBlogCommentTotal   : ==> Parameters: 
+2021-08-04 19:56:01.112 DEBUG 16276 --- [http-nio-8080-exec-8] c.star.dao.BlogDao.getBlogCommentTotal   : <==      Total: 1
+2021-08-04 19:56:01.113 DEBUG 16276 --- [http-nio-8080-exec-8] c.star.dao.BlogDao.getBlogMessageTotal   : ==>  Preparing: select count(*) from myblog.t_message 
+2021-08-04 19:56:01.114 DEBUG 16276 --- [http-nio-8080-exec-8] c.star.dao.BlogDao.getBlogMessageTotal   : ==> Parameters: 
+2021-08-04 19:56:01.115 DEBUG 16276 --- [http-nio-8080-exec-8] c.star.dao.BlogDao.getBlogMessageTotal   : <==      Total: 1
+2021-08-04 19:56:01.115  INFO 16276 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Result : index :: blogMessage
+2021-08-04 19:59:14.990 DEBUG 16276 --- [http-nio-8080-exec-4] c.star.dao.PictureDao.listPicture_COUNT  : ==>  Preparing: SELECT count(0) FROM myblog.t_picture 
+2021-08-04 19:59:14.990 DEBUG 16276 --- [http-nio-8080-exec-4] c.star.dao.PictureDao.listPicture_COUNT  : ==> Parameters: 
+2021-08-04 19:59:15.000 DEBUG 16276 --- [http-nio-8080-exec-4] c.star.dao.PictureDao.listPicture_COUNT  : <==      Total: 1
+2021-08-04 19:59:15.000 DEBUG 16276 --- [http-nio-8080-exec-4] com.star.dao.PictureDao.listPicture      : ==>  Preparing: select * from myblog.t_picture order by t_picture.id desc LIMIT ? 
+2021-08-04 19:59:15.000 DEBUG 16276 --- [http-nio-8080-exec-4] com.star.dao.PictureDao.listPicture      : ==> Parameters: 10(Integer)
+2021-08-04 19:59:15.001 DEBUG 16276 --- [http-nio-8080-exec-4] com.star.dao.PictureDao.listPicture      : <==      Total: 2
+2021-08-04 19:59:15.043  INFO 16276 --- [http-nio-8080-exec-9] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-04 19:59:15.043 DEBUG 16276 --- [http-nio-8080-exec-9] com.star.dao.BlogDao.getBlogTotal        : ==>  Preparing: select count(*) from myblog.t_blog 
+2021-08-04 19:59:15.043 DEBUG 16276 --- [http-nio-8080-exec-9] com.star.dao.BlogDao.getBlogTotal        : ==> Parameters: 
+2021-08-04 19:59:15.045 DEBUG 16276 --- [http-nio-8080-exec-9] com.star.dao.BlogDao.getBlogTotal        : <==      Total: 1
+2021-08-04 19:59:15.046 DEBUG 16276 --- [http-nio-8080-exec-9] com.star.dao.BlogDao.getBlogViewTotal    : ==>  Preparing: select sum(views) from myblog.t_blog 
+2021-08-04 19:59:15.046 DEBUG 16276 --- [http-nio-8080-exec-9] com.star.dao.BlogDao.getBlogViewTotal    : ==> Parameters: 
+2021-08-04 19:59:15.046 DEBUG 16276 --- [http-nio-8080-exec-9] com.star.dao.BlogDao.getBlogViewTotal    : <==      Total: 1
+2021-08-04 19:59:15.047 DEBUG 16276 --- [http-nio-8080-exec-9] c.star.dao.BlogDao.getBlogCommentTotal   : ==>  Preparing: select count(*) from myblog.t_comment 
+2021-08-04 19:59:15.047 DEBUG 16276 --- [http-nio-8080-exec-9] c.star.dao.BlogDao.getBlogCommentTotal   : ==> Parameters: 
+2021-08-04 19:59:15.048 DEBUG 16276 --- [http-nio-8080-exec-9] c.star.dao.BlogDao.getBlogCommentTotal   : <==      Total: 1
+2021-08-04 19:59:15.049 DEBUG 16276 --- [http-nio-8080-exec-9] c.star.dao.BlogDao.getBlogMessageTotal   : ==>  Preparing: select count(*) from myblog.t_message 
+2021-08-04 19:59:15.049 DEBUG 16276 --- [http-nio-8080-exec-9] c.star.dao.BlogDao.getBlogMessageTotal   : ==> Parameters: 
+2021-08-04 19:59:15.051 DEBUG 16276 --- [http-nio-8080-exec-9] c.star.dao.BlogDao.getBlogMessageTotal   : <==      Total: 1
+2021-08-04 19:59:15.051  INFO 16276 --- [http-nio-8080-exec-9] com.star.aspect.LogAspect                : Result : index :: blogMessage
+2021-08-04 20:00:52.818 ERROR 16276 --- [http-nio-8080-exec-7] c.s.hander.ControllerExceptionHandler    : Requst URL : http://localhost:8080/admin/login，Exception : {}
+
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:213)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:421)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:367)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:110)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:59)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:395)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1234)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1016)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-08-04 20:00:52.819  WARN 16276 --- [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2021-08-04 20:20:52.848 DEBUG 16276 --- [http-nio-8080-exec-4] c.s.d.UserDao.findByUsernameAndPassword  : ==>  Preparing: select * from myblog.t_user where username = ? and password = ?; 
+2021-08-04 20:20:52.849 DEBUG 16276 --- [http-nio-8080-exec-4] c.s.d.UserDao.findByUsernameAndPassword  : ==> Parameters: zhaosi(String), 96e79218965eb72c92a549dd5a330112(String)
+2021-08-04 20:20:52.850 DEBUG 16276 --- [http-nio-8080-exec-4] c.s.d.UserDao.findByUsernameAndPassword  : <==      Total: 1
+2021-08-04 20:20:52.900  INFO 16276 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-04 20:20:52.900 DEBUG 16276 --- [http-nio-8080-exec-10] com.star.dao.BlogDao.getBlogTotal        : ==>  Preparing: select count(*) from myblog.t_blog 
+2021-08-04 20:20:52.900 DEBUG 16276 --- [http-nio-8080-exec-10] com.star.dao.BlogDao.getBlogTotal        : ==> Parameters: 
+2021-08-04 20:20:52.901 DEBUG 16276 --- [http-nio-8080-exec-10] com.star.dao.BlogDao.getBlogTotal        : <==      Total: 1
+2021-08-04 20:20:52.902 DEBUG 16276 --- [http-nio-8080-exec-10] com.star.dao.BlogDao.getBlogViewTotal    : ==>  Preparing: select sum(views) from myblog.t_blog 
+2021-08-04 20:20:52.902 DEBUG 16276 --- [http-nio-8080-exec-10] com.star.dao.BlogDao.getBlogViewTotal    : ==> Parameters: 
+2021-08-04 20:20:52.903 DEBUG 16276 --- [http-nio-8080-exec-10] com.star.dao.BlogDao.getBlogViewTotal    : <==      Total: 1
+2021-08-04 20:20:52.903 DEBUG 16276 --- [http-nio-8080-exec-10] c.star.dao.BlogDao.getBlogCommentTotal   : ==>  Preparing: select count(*) from myblog.t_comment 
+2021-08-04 20:20:52.903 DEBUG 16276 --- [http-nio-8080-exec-10] c.star.dao.BlogDao.getBlogCommentTotal   : ==> Parameters: 
+2021-08-04 20:20:52.905 DEBUG 16276 --- [http-nio-8080-exec-10] c.star.dao.BlogDao.getBlogCommentTotal   : <==      Total: 1
+2021-08-04 20:20:52.905 DEBUG 16276 --- [http-nio-8080-exec-10] c.star.dao.BlogDao.getBlogMessageTotal   : ==>  Preparing: select count(*) from myblog.t_message 
+2021-08-04 20:20:52.905 DEBUG 16276 --- [http-nio-8080-exec-10] c.star.dao.BlogDao.getBlogMessageTotal   : ==> Parameters: 
+2021-08-04 20:20:52.907 DEBUG 16276 --- [http-nio-8080-exec-10] c.star.dao.BlogDao.getBlogMessageTotal   : <==      Total: 1
+2021-08-04 20:20:52.907  INFO 16276 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Result : index :: blogMessage
+2021-08-04 20:20:54.028 DEBUG 16276 --- [http-nio-8080-exec-1] c.s.d.F.listFriendLink_COUNT             : ==>  Preparing: SELECT count(0) FROM myblog.t_friend 
+2021-08-04 20:20:54.029 DEBUG 16276 --- [http-nio-8080-exec-1] c.s.d.F.listFriendLink_COUNT             : ==> Parameters: 
+2021-08-04 20:20:54.031 DEBUG 16276 --- [http-nio-8080-exec-1] c.s.d.F.listFriendLink_COUNT             : <==      Total: 1
+2021-08-04 20:20:54.031 DEBUG 16276 --- [http-nio-8080-exec-1] c.star.dao.FriendLinkDao.listFriendLink  : ==>  Preparing: select * from myblog.t_friend order by t_friend.create_time desc LIMIT ? 
+2021-08-04 20:20:54.031 DEBUG 16276 --- [http-nio-8080-exec-1] c.star.dao.FriendLinkDao.listFriendLink  : ==> Parameters: 10(Integer)
+2021-08-04 20:20:54.033 DEBUG 16276 --- [http-nio-8080-exec-1] c.star.dao.FriendLinkDao.listFriendLink  : <==      Total: 2
+2021-08-04 20:20:54.074  INFO 16276 --- [http-nio-8080-exec-5] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-04 20:20:54.074 DEBUG 16276 --- [http-nio-8080-exec-5] com.star.dao.BlogDao.getBlogTotal        : ==>  Preparing: select count(*) from myblog.t_blog 
+2021-08-04 20:20:54.074 DEBUG 16276 --- [http-nio-8080-exec-5] com.star.dao.BlogDao.getBlogTotal        : ==> Parameters: 
+2021-08-04 20:20:54.076 DEBUG 16276 --- [http-nio-8080-exec-5] com.star.dao.BlogDao.getBlogTotal        : <==      Total: 1
+2021-08-04 20:20:54.076 DEBUG 16276 --- [http-nio-8080-exec-5] com.star.dao.BlogDao.getBlogViewTotal    : ==>  Preparing: select sum(views) from myblog.t_blog 
+2021-08-04 20:20:54.077 DEBUG 16276 --- [http-nio-8080-exec-5] com.star.dao.BlogDao.getBlogViewTotal    : ==> Parameters: 
+2021-08-04 20:20:54.077 DEBUG 16276 --- [http-nio-8080-exec-5] com.star.dao.BlogDao.getBlogViewTotal    : <==      Total: 1
+2021-08-04 20:20:54.078 DEBUG 16276 --- [http-nio-8080-exec-5] c.star.dao.BlogDao.getBlogCommentTotal   : ==>  Preparing: select count(*) from myblog.t_comment 
+2021-08-04 20:20:54.078 DEBUG 16276 --- [http-nio-8080-exec-5] c.star.dao.BlogDao.getBlogCommentTotal   : ==> Parameters: 
+2021-08-04 20:20:54.080 DEBUG 16276 --- [http-nio-8080-exec-5] c.star.dao.BlogDao.getBlogCommentTotal   : <==      Total: 1
+2021-08-04 20:20:54.081 DEBUG 16276 --- [http-nio-8080-exec-5] c.star.dao.BlogDao.getBlogMessageTotal   : ==>  Preparing: select count(*) from myblog.t_message 
+2021-08-04 20:20:54.081 DEBUG 16276 --- [http-nio-8080-exec-5] c.star.dao.BlogDao.getBlogMessageTotal   : ==> Parameters: 
+2021-08-04 20:20:54.082 DEBUG 16276 --- [http-nio-8080-exec-5] c.star.dao.BlogDao.getBlogMessageTotal   : <==      Total: 1
+2021-08-04 20:20:54.083  INFO 16276 --- [http-nio-8080-exec-5] com.star.aspect.LogAspect                : Result : index :: blogMessage
+2021-08-04 20:20:54.505 DEBUG 16276 --- [http-nio-8080-exec-8] c.star.dao.PictureDao.listPicture_COUNT  : ==>  Preparing: SELECT count(0) FROM myblog.t_picture 
+2021-08-04 20:20:54.506 DEBUG 16276 --- [http-nio-8080-exec-8] c.star.dao.PictureDao.listPicture_COUNT  : ==> Parameters: 
+2021-08-04 20:20:54.507 DEBUG 16276 --- [http-nio-8080-exec-8] c.star.dao.PictureDao.listPicture_COUNT  : <==      Total: 1
+2021-08-04 20:20:54.508 DEBUG 16276 --- [http-nio-8080-exec-8] com.star.dao.PictureDao.listPicture      : ==>  Preparing: select * from myblog.t_picture order by t_picture.id desc LIMIT ? 
+2021-08-04 20:20:54.508 DEBUG 16276 --- [http-nio-8080-exec-8] com.star.dao.PictureDao.listPicture      : ==> Parameters: 10(Integer)
+2021-08-04 20:20:54.509 DEBUG 16276 --- [http-nio-8080-exec-8] com.star.dao.PictureDao.listPicture      : <==      Total: 2
+2021-08-04 20:20:54.541  INFO 16276 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-04 20:20:54.542 DEBUG 16276 --- [http-nio-8080-exec-1] com.star.dao.BlogDao.getBlogTotal        : ==>  Preparing: select count(*) from myblog.t_blog 
+2021-08-04 20:20:54.542 DEBUG 16276 --- [http-nio-8080-exec-1] com.star.dao.BlogDao.getBlogTotal        : ==> Parameters: 
+2021-08-04 20:20:54.543 DEBUG 16276 --- [http-nio-8080-exec-1] com.star.dao.BlogDao.getBlogTotal        : <==      Total: 1
+2021-08-04 20:20:54.547 DEBUG 16276 --- [http-nio-8080-exec-1] com.star.dao.BlogDao.getBlogViewTotal    : ==>  Preparing: select sum(views) from myblog.t_blog 
+2021-08-04 20:20:54.548 DEBUG 16276 --- [http-nio-8080-exec-1] com.star.dao.BlogDao.getBlogViewTotal    : ==> Parameters: 
+2021-08-04 20:20:54.549 DEBUG 16276 --- [http-nio-8080-exec-1] com.star.dao.BlogDao.getBlogViewTotal    : <==      Total: 1
+2021-08-04 20:20:54.549 DEBUG 16276 --- [http-nio-8080-exec-1] c.star.dao.BlogDao.getBlogCommentTotal   : ==>  Preparing: select count(*) from myblog.t_comment 
+2021-08-04 20:20:54.550 DEBUG 16276 --- [http-nio-8080-exec-1] c.star.dao.BlogDao.getBlogCommentTotal   : ==> Parameters: 
+2021-08-04 20:20:54.552 DEBUG 16276 --- [http-nio-8080-exec-1] c.star.dao.BlogDao.getBlogCommentTotal   : <==      Total: 1
+2021-08-04 20:20:54.552 DEBUG 16276 --- [http-nio-8080-exec-1] c.star.dao.BlogDao.getBlogMessageTotal   : ==>  Preparing: select count(*) from myblog.t_message 
+2021-08-04 20:20:54.552 DEBUG 16276 --- [http-nio-8080-exec-1] c.star.dao.BlogDao.getBlogMessageTotal   : ==> Parameters: 
+2021-08-04 20:20:54.554 DEBUG 16276 --- [http-nio-8080-exec-1] c.star.dao.BlogDao.getBlogMessageTotal   : <==      Total: 1
+2021-08-04 20:20:54.554  INFO 16276 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Result : index :: blogMessage
+2021-08-04 20:21:03.999  INFO 16276 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.index', args=[{}, 1, {}]}
+2021-08-04 20:21:04.002 DEBUG 16276 --- [http-nio-8080-exec-8] c.s.dao.BlogDao.getFirstPageBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM myblog.t_blog b, myblog.t_type t, myblog.t_user u WHERE b.type_id = t.id AND u.id = b.user_id 
+2021-08-04 20:21:04.002 DEBUG 16276 --- [http-nio-8080-exec-8] c.s.dao.BlogDao.getFirstPageBlog_COUNT   : ==> Parameters: 
+2021-08-04 20:21:04.003 DEBUG 16276 --- [http-nio-8080-exec-8] c.s.dao.BlogDao.getFirstPageBlog_COUNT   : <==      Total: 1
+2021-08-04 20:21:04.004 DEBUG 16276 --- [http-nio-8080-exec-8] com.star.dao.BlogDao.getFirstPageBlog    : ==>  Preparing: select b.id,b.title,b.first_picture, b.views, b.comment_count,b.update_time,b.description, t.name , u.nickname, u.avatar from myblog.t_blog b, myblog.t_type t,myblog.t_user u where b.type_id = t.id and u.id = b.user_id order by b.update_time desc LIMIT ? 
+2021-08-04 20:21:04.004 DEBUG 16276 --- [http-nio-8080-exec-8] com.star.dao.BlogDao.getFirstPageBlog    : ==> Parameters: 10(Integer)
+2021-08-04 20:21:04.005 DEBUG 16276 --- [http-nio-8080-exec-8] com.star.dao.BlogDao.getFirstPageBlog    : <==      Total: 4
+2021-08-04 20:21:04.006 DEBUG 16276 --- [http-nio-8080-exec-8] c.star.dao.BlogDao.getAllRecommendBlog   : ==>  Preparing: select * from myblog.t_blog where t_blog.recommend = true order by t_blog.update_time desc limit 4; 
+2021-08-04 20:21:04.006 DEBUG 16276 --- [http-nio-8080-exec-8] c.star.dao.BlogDao.getAllRecommendBlog   : ==> Parameters: 
+2021-08-04 20:21:04.008 DEBUG 16276 --- [http-nio-8080-exec-8] c.star.dao.BlogDao.getAllRecommendBlog   : <==      Total: 3
+2021-08-04 20:21:04.009  INFO 16276 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Result : index
+2021-08-04 20:21:04.063  INFO 16276 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-04 20:21:04.063 DEBUG 16276 --- [http-nio-8080-exec-4] com.star.dao.BlogDao.getBlogTotal        : ==>  Preparing: select count(*) from myblog.t_blog 
+2021-08-04 20:21:04.063 DEBUG 16276 --- [http-nio-8080-exec-4] com.star.dao.BlogDao.getBlogTotal        : ==> Parameters: 
+2021-08-04 20:21:04.064 DEBUG 16276 --- [http-nio-8080-exec-4] com.star.dao.BlogDao.getBlogTotal        : <==      Total: 1
+2021-08-04 20:21:04.065 DEBUG 16276 --- [http-nio-8080-exec-4] com.star.dao.BlogDao.getBlogViewTotal    : ==>  Preparing: select sum(views) from myblog.t_blog 
+2021-08-04 20:21:04.065 DEBUG 16276 --- [http-nio-8080-exec-4] com.star.dao.BlogDao.getBlogViewTotal    : ==> Parameters: 
+2021-08-04 20:21:04.066 DEBUG 16276 --- [http-nio-8080-exec-4] com.star.dao.BlogDao.getBlogViewTotal    : <==      Total: 1
+2021-08-04 20:21:04.066 DEBUG 16276 --- [http-nio-8080-exec-4] c.star.dao.BlogDao.getBlogCommentTotal   : ==>  Preparing: select count(*) from myblog.t_comment 
+2021-08-04 20:21:04.066 DEBUG 16276 --- [http-nio-8080-exec-4] c.star.dao.BlogDao.getBlogCommentTotal   : ==> Parameters: 
+2021-08-04 20:21:04.068 DEBUG 16276 --- [http-nio-8080-exec-4] c.star.dao.BlogDao.getBlogCommentTotal   : <==      Total: 1
+2021-08-04 20:21:04.068 DEBUG 16276 --- [http-nio-8080-exec-4] c.star.dao.BlogDao.getBlogMessageTotal   : ==>  Preparing: select count(*) from myblog.t_message 
+2021-08-04 20:21:04.068 DEBUG 16276 --- [http-nio-8080-exec-4] c.star.dao.BlogDao.getBlogMessageTotal   : ==> Parameters: 
+2021-08-04 20:21:04.070 DEBUG 16276 --- [http-nio-8080-exec-4] c.star.dao.BlogDao.getBlogMessageTotal   : <==      Total: 1
+2021-08-04 20:21:04.071  INFO 16276 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Result : index :: blogMessage
