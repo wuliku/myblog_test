@@ -38,6 +38,7 @@ public class LogAspect {
         Object[] args = joinPoint.getArgs();
         RequestLog requestLog = new RequestLog(url, ip, classMethod, args);
         logger.info("Request : {}", requestLog);
+        logger.info("");
     }
 
     @After("log()")
