@@ -38,7 +38,7 @@ public class MessageController {
 
     @GetMapping("/message-test")
     public String message(@RequestParam(required = false) String id,
-                          @RequestParam(required = false) String method) {
+                          @RequestParam(required = false) String taskId) {
         return "message";
     }
 
