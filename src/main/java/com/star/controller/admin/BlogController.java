@@ -10,6 +10,8 @@ import com.star.queryvo.SearchBlog;
 import com.star.queryvo.ShowBlog;
 import com.star.service.BlogService;
 import com.star.service.TypeService;
+import org.junit.Test;
+import org.omg.PortableInterceptor.INACTIVE;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,7 +20,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
-import java.util.List;
+import java.util.*;
 
 /**
  * @Description: 博客管理控制器
@@ -118,6 +120,65 @@ public class BlogController {
         PageInfo<BlogQuery> pageInfo = new PageInfo<>(blogBySearch);
         model.addAttribute("pageInfo", pageInfo);
         return "admin/blogs :: blogList";
+    }
+
+
+    @Test
+    public void test () {
+        List<Integer> list = new ArrayList();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(6);
+
+        List<Integer> listclone = new ArrayList();
+
+        listclone.add(4);
+        listclone.add(5);
+        listclone.add(7);
+
+        List<Integer> newlist = new ArrayList<>();
+        for (int i = 0; i < list.size(); i++) {
+            boolean flag = false;
+            for (int j = 0; j < listclone.size(); j++) {
+                if (list.get(i) == listclone.get(j)) {
+                    newlist.add(listclone.get(j));
+                    flag = true;
+                    listclone.remove(listclone.get(j));
+                    j--;
+                    break;
+                }
+            }
+            if (!flag) {
+                newlist.add(list.get(i));
+            }
+        }
+        System.out.println(list);
+        if (listclone.size() > 0) newlist.addAll(listclone);
+        System.out.println(listclone);
+        System.out.println(newlist);
+    }
+
+
+    @Test
+    public void test2 () {
+        Set<String> mergeSet = new HashSet<>();
+        List<String> source = new ArrayList<>();
+        List<String> target = new ArrayList<>();
+        source.add("a");
+        source.add("b");
+        source.add("c");
+
+        target.add("a");
+        target.add("b");
+        target.add("c");
+        if (source.size() > 0) mergeSet.addAll(source);
+        if (target.size() > 0) mergeSet.addAll(target);
+        System.out.println(mergeSet);
+        System.out.println(source.toString().equals(target.toString()));
+
+
+
     }
 }
 
