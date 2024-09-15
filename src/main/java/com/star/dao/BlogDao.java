@@ -3,6 +3,7 @@ package com.star.dao;
 import com.star.entity.Blog;
 import com.star.queryvo.*;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -17,7 +18,6 @@ import java.util.List;
 @Mapper
 @Repository
 public interface BlogDao {
-
     ShowBlog getBlogById(Long id);
 
     List<Blog> getAllBlog();
